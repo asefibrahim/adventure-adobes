@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 import SingleInfo from './SingleInfo';
+import { Link } from 'react-router-dom';
+
+
 
 const BannerFirst = () => {
     const [place, setPlace] = useState([])
@@ -36,9 +39,9 @@ const BannerFirst = () => {
                                 <p className='text-5xl font-bold'>{details.name}</p>
                                 <p>{details.description}</p>
                                 {
-                                    details.name && <a
+                                    details.name && <Link
                                         class="group relative inline-flex items-center overflow-hidden rounded bg-orange-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
-                                        href="/download"
+                                        to={`/booking/${details.id}`}
                                     >
                                         <span class="absolute -start-full transition-all group-hover:start-4">
                                             <svg
@@ -60,7 +63,7 @@ const BannerFirst = () => {
                                         <span class="text-sm font-medium transition-all group-hover:ms-4">
                                             Book Now  !!
                                         </span>
-                                    </a>
+                                    </Link>
 
                                 }
                             </div>
@@ -87,26 +90,36 @@ const BannerFirst = () => {
                     </div>
 
 
-                    {/* swiper start */}
 
 
 
-                    <div className="flex items-center justify-center -mx-4 lg:pl-8">
-                        <div className="flex flex-col items-end px-3">
-                            <div className=' grid grid-cols-3'>
-                                {
-                                    place.map(single => <SingleInfo single={single} handleDetails={handleDetails}></SingleInfo>)
-                                }
-                            </div>
-                        </div>
+
+
+
+                    <div className=" grid grid-cols-3  lg:pl-8">
+
+
+
+
+
+
+
+
+                        {
+                            place.map(single => <SingleInfo single={single} handleDetails={handleDetails}></SingleInfo>)
+                        }
 
                     </div>
+
                 </div>
             </div>
 
         </div>
+
+
     );
 
 };
+
 
 export default BannerFirst;

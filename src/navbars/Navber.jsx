@@ -6,7 +6,7 @@ const NavBer = () => {
     return (
         <div className=''>
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-                <div className="relative flex items-center justify-between text-white">
+                <div className="relative flex items-center justify-between text-orange-400">
                     <a
                         href="/"
                         aria-label="Company"
@@ -29,7 +29,7 @@ const NavBer = () => {
                             <rect x="14" y="11" width="7" height="12" />
                         </svg>
                         <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
-                            Adventurous Adobes
+                            Adventurous <span className='text-orange-400'> Adobes</span>
                         </span>
                     </a>
                     <ul className="flex items-center hidden space-x-8 lg:flex">

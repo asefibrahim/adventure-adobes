@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
+
+
 const SingleInfo = ({ single, handleDetails }) => {
     const { id, name, image_url } = single
 
@@ -36,7 +39,10 @@ const SingleInfo = ({ single, handleDetails }) => {
             </a >
 
         </div >
+
     );
 };
+
+
 
 export default SingleInfo;
