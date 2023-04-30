@@ -4,6 +4,8 @@ import './MianLayOut.css'
 
 
 import { Outlet } from 'react-router-dom';
+import SingleInfo from '../banners/SingleInfo';
+
 
 const MainLayout = () => {
     return (
@@ -12,6 +14,9 @@ const MainLayout = () => {
         >
 
             <NavBer></NavBer>
+
+
+
             <Outlet></Outlet>
 
         </div>
